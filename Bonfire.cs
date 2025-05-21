@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class Bonfire : MonoBehaviour
 {
-    public float LifeTime = 15f;
-    public float HitPower = 0.1f;
+    public float lifeTime = 15f;
+    public float heatPower = 0.1f;
     
 
     // Update is called once per frame
     void Update()
     {
-        LifeTime -= Time.deltaTime;
-        if(LifeTime <= 0)
+        lifeTime -= Time.deltaTime;
+        if(lifeTime <= 0)
         {
             gameObject.SetActive(false);
         }
@@ -22,10 +22,11 @@ public class Bonfire : MonoBehaviour
         if(other.GetComponent<Temperature>()!= null)
         {
             Temperature temperature = other.GetComponent<Temperature>();
-            if (temperature.temperatureCurrent < temperature.temperatureCurrent)
+            if (temperature.temperatureCurrent < temperature.temperatureNormal)
             {
                 temperature.temperatureCurrent += heatPower * Time.deltaTime;
             }
         }
     }
 }
+
