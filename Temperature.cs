@@ -7,7 +7,7 @@ public class Temperature : MonoBehaviour
     public Health health;
     public int PlayerDamage = 2;
     public float temperatureCurrent = 36.6f;
-    public float temperaturenNormal = 36.6f;
+    public float temperatureNormal = 36.6f;
     public float temperatureCritical = 34f;
     public float freezeSpeed = 0.05f;
     public float freezeDamageTimer = 1;
@@ -27,3 +27,4 @@ public class Temperature : MonoBehaviour
         }
     }
 }
+
